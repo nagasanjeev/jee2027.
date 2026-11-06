@@ -1,0 +1,9 @@
+{
+ "maxPerSubject": 24,
+ "daysBack": 120,
+ "subjects": {
+  "Maths":     {"queries": ["JEE Main 2027 maths revision", "JEE Main maths PYQ solutions", "JEE Main maths important questions"], "channelIds": []},
+  "Physics":   {"queries": ["JEE Main 2027 physics revision", "JEE Main physics PYQ solutions", "JEE Main physics important questions"], "channelIds": []},
+  "Chemistry": {"queries": ["JEE Main 2027 chemistry revision", "JEE Main chemistry PYQ solutions", "JEE Main chemistry important questions"], "channelIds": []}
+ }
+}

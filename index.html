@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#06182e"><title>JEE Main 2027 – Preparation System</title>
+<style>
+:root{--bg:#0a0e1f;--card:#131a33;--ink:#e8ecff;--mut:#98a3cc;--acc:#6c8cff;--ok:#38c98a;--bad:#ff6b6b;--warn:#f5b84b;--bd:#26305a}
+:root[data-t=light]{--bg:#f3f5fb;--card:#fff;--ink:#12183a;--mut:#56608a;--bd:#d5daee}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main{max-width:900px;margin:auto;padding:14px 14px 80px}
+h1,h2,h3{margin:.4em 0}h1{font-size:1.3rem}h2{font-size:1.15rem}h3{font-size:1rem}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:10px 0}
+button,select,input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 12px;min-height:44px}
+button{cursor:pointer;background:var(--acc);color:#fff;border:0;font-weight:600;margin:3px 3px 3px 0}
+button.s{background:var(--card);color:var(--ink);border:1px solid var(--bd)}button.bad{background:var(--bad)}
+.g{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.cd{display:flex;gap:8px;text-align:center}.cd div{flex:1;background:var(--bg);border-radius:10px;padding:8px}.cd b{font-size:1.6rem;display:block}
+.mut{color:var(--mut);font-size:.85rem}.tag{font-size:.75rem;padding:2px 8px;border-radius:99px;border:1px solid var(--bd)}
+.H{color:var(--bad)}.M{color:var(--warn)}.L{color:var(--ok)}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--bd);padding:6px;text-align:left;font-size:.9rem}
+.nav{display:flex;flex-wrap:wrap;gap:6px}.nav button{width:42px;padding:0}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:1px solid var(--bd)}.opt.on{border-color:var(--acc);background:#6c8cff33}
+.n-na{background:var(--card);color:var(--ink);border:1px solid var(--bd)}.n-a{background:var(--ok)}.n-r{background:#9b6cff}.n-v{background:var(--warn);color:#000}
+.bar{height:8px;background:var(--bg);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+
+:root{--bg:#06182e;--card:#0d2a4acc;--ink:#fdf3dc;--mut:#9fb8d6;--acc:#f5b84b;--bd:#2c5a8a;--ok:#3ed598;--bad:#e5443a}
+:root[data-t=light]{--bg:#fbf1d6;--card:#fffaf0;--ink:#2a1a08;--mut:#7a6444;--acc:#c0392b;--bd:#e0c68a}
+body{background:linear-gradient(180deg,#0a3a66 0%,#06182e 55%,#030c18 100%) fixed;font-family:"Trebuchet MS",system-ui,sans-serif}
+:root[data-t=light] body{background:linear-gradient(180deg,#fff3c9,#f6dca0) fixed}
+body::before{content:"";position:fixed;left:0;right:0;bottom:0;height:90px;pointer-events:none;opacity:.35;background:repeating-radial-gradient(circle at 20px 100px,transparent 0 18px,#4aa3e0 19px 21px);background-size:80px 90px;animation:wave 6s linear infinite}
+@keyframes wave{to{background-position:80px 0}}
+@keyframes rise{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes bob{50%{transform:translateY(-4px)}}
+#app>*{animation:rise .45s cubic-bezier(.2,.8,.2,1) both}
+#app>*:nth-child(2){animation-delay:.05s}#app>*:nth-child(3){animation-delay:.1s}#app>*:nth-child(4){animation-delay:.15s}#app>*:nth-child(5){animation-delay:.2s}#app>*:nth-child(n+6){animation-delay:.25s}
+.card{backdrop-filter:blur(6px);box-shadow:0 6px 20px #0006;transition:transform .25s}
+.card:hover{transform:translateY(-2px)}
+button{background:linear-gradient(135deg,#f5b84b,#e0892b);color:#2a1a08;transition:transform .15s,filter .2s;box-shadow:0 3px 10px #0005}
+button:hover{filter:brightness(1.1);transform:translateY(-2px)}button:active{transform:scale(.95)}
+button.s{background:var(--card);color:var(--ink);box-shadow:none}
+h1{font-family:Georgia,serif;letter-spacing:.04em;text-shadow:0 2px 0 #0008;color:var(--acc)}
+.hero{text-align:center;padding:6px 0}.hero .hat{font-size:2.4rem;display:inline-block;animation:bob 3s ease-in-out infinite}
+.cd div{background:linear-gradient(180deg,#6b3e1a,#3d210c);color:#fdf3dc;border:2px solid #c9923a;border-radius:6px}
+.cd b{font-family:Georgia,serif;color:#ffd77a}
+.tiles{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));margin:10px 0}
+.tile{padding:18px 10px;text-align:center;border-radius:14px;background:linear-gradient(160deg,#fbe9b8,#e8c577);color:#3a2308;border:2px solid #8a5a1e;font-weight:700;box-shadow:0 5px 0 #6b4414,0 8px 16px #0006;margin:0}
+.tile span{display:block;font-size:2rem;margin-bottom:4px}
+.tile:hover{transform:translateY(-4px) rotate(-1deg)}.tile:active{transform:translateY(2px);box-shadow:0 2px 0 #6b4414}
+.tile.sub{background:linear-gradient(160deg,#e5443a,#9c2018);color:#fff;border-color:#5a0f0a;box-shadow:0 5px 0 #5a0f0a,0 8px 16px #0006}
+.res{display:flex;gap:12px;align-items:center}.res .ic{font-size:2rem;background:#0003;border-radius:12px;padding:8px 12px}
+.res .bt{margin-left:auto;white-space:nowrap;text-decoration:none}.pill{display:inline-block;margin:3px;padding:6px 12px;border-radius:99px;background:#0003;border:1px solid var(--bd);color:var(--ink);text-decoration:none;font-size:.85rem}
+.vid{display:flex;gap:10px;text-decoration:none;color:var(--ink);margin:8px 0}.vid img{width:120px;border-radius:8px;flex:none}
+.stat{text-align:center}.stat b{font-size:1.8rem;color:var(--acc);display:block}
+.bar i{background:linear-gradient(90deg,#e5443a,#f5b84b);transition:width .8s}
+a{color:inherit}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.fh{position:fixed;left:-70px;z-index:50;font-size:2.4rem;cursor:pointer;user-select:none;filter:drop-shadow(0 3px 3px #0008);animation:fly var(--d,12s) linear forwards}
+.fh.r{left:auto;right:-70px;animation-name:flyr}
+.fh span{display:block;animation:wob .8s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(18deg) translateY(-8px)}}
+@keyframes fly{to{transform:translateX(calc(100vw + 140px))}}@keyframes flyr{to{transform:translateX(calc(-100vw - 140px))}}
+.fh.pop{animation:pop .7s forwards}
+@keyframes pop{40%{transform:scale(2.2) rotate(180deg)}100%{transform:scale(0) rotate(720deg);opacity:0}}
+.bub{position:fixed;z-index:60;background:#fff;color:#222;padding:6px 12px;border-radius:14px;font-weight:700;font-size:.9rem;max-width:200px;box-shadow:0 4px 12px #0007;animation:rise .3s both;transition:opacity .4s;pointer-events:none}
+.sh{position:fixed;top:-50px;z-index:40;pointer-events:none;font-size:1.8rem;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(540deg)}}
+.ship{position:fixed;bottom:14px;left:-90px;z-index:30;font-size:2.6rem;pointer-events:none;animation:sail 22s linear forwards}
+@keyframes sail{25%{transform:translate(25vw,-6px) rotate(-4deg)}50%{transform:translate(55vw,4px) rotate(4deg)}75%{transform:translate(85vw,-6px) rotate(-4deg)}100%{transform:translate(calc(100vw + 120px),0)}}
+.hat{cursor:pointer}
+</style></head><body><main id="app"></main>
+<script>
+"use strict";
+/* ============ DATA ============ */
+// Chapter names follow the broad NTA JEE Main Paper-1 syllabus units. Priority = INDICATIVE only (not verified
+// official statistics). Edit the arrays below to match your own PYQ analysis.
+const SYL={
+Maths:{ch:[["Sets, Relations & Functions","M"],["Complex Numbers","H"],["Quadratic Equations","M"],["Matrices & Determinants","H"],["Permutations & Combinations","M"],["Binomial Theorem","M"],["Sequences & Series","H"],["Limits, Continuity & Differentiability","H"],["Integral Calculus","H"],["Differential Equations","M"],["Coordinate Geometry (Straight line, Circle, Conics)","H"],["3D Geometry","H"],["Vector Algebra","M"],["Statistics & Probability","H"],["Trigonometry","M"],["Mathematical Reasoning","L"]]},
+Physics:{ch:[["Units, Dimensions & Errors","L"],["Kinematics","M"],["Laws of Motion","M"],["Work, Energy & Power","M"],["Rotational Motion","H"],["Gravitation","M"],["Properties of Solids & Fluids","M"],["Thermodynamics & KTG","H"],["Oscillations & Waves","M"],["Electrostatics","H"],["Current Electricity","H"],["Magnetism & EMI","H"],["Alternating Current & EM Waves","M"],["Optics","H"],["Dual Nature & Atoms","H"],["Nuclei & Semiconductors","M"],["Experimental Skills","M"]]},
+Chemistry:{ch:[["Some Basic Concepts / Mole","M"],["Atomic Structure","M"],["Chemical Bonding","H"],["Thermodynamics & Equilibrium","H"],["Solutions & Electrochemistry","H"],["Chemical Kinetics","M"],["Redox & Hydrogen/s-block","L"],["p-block Elements","H"],["d & f-block, Coordination Compounds","H"],["GOC & Isomerism","H"],["Hydrocarbons & Haloalkanes","M"],["Alcohols, Phenols, Aldehydes, Ketones, Acids","H"],["Amines, Biomolecules & Polymers","M"],["Environmental/Practical Chemistry","L"]]}};
+// Question bank: type m=MCQ (a = option index), n=numerical (a = number). src:"gen" = generated practice.
+const Q=[
+["M01","Maths","Quadratic Equations","Sum of the roots of x² − 5x + 6 = 0 is:",["2","3","5","6"],2,"m","Sum = −b/a = 5."],
+["M02","Maths","Limits, Continuity & Differentiability","d/dx [sin(x²)] equals:",["cos(x²)","2x cos(x²)","2x sin(x²)","−2x cos(x²)"],1,"m","Chain rule: cos(x²)·2x."],
+["M03","Maths","Integral Calculus","∫₀¹ x² dx equals:",["1/2","1/3","1/4","1"],1,"m","[x³/3]₀¹ = 1/3."],
+["M04","Maths","Permutations & Combinations","Number of arrangements of the letters of MATH (all distinct):",[],24,"n","4! = 24."],
+["M05","Maths","Coordinate Geometry (Straight line, Circle, Conics)","Distance between (1,2) and (4,6):",[],5,"n","√(9+16)=5."],
+["M06","Maths","Matrices & Determinants","A is 2×2 with det A = 3. Find det(2A):",[],12,"n","det(kA)=k²·det A = 4·3 = 12."],
+["M07","Maths","Trigonometry","sin 30° + cos 60° =",["0","1/2","1","√3/2"],2,"m","1/2+1/2=1."],
+["M08","Maths","Sequences & Series","Sum of the first 10 natural numbers:",[],55,"n","n(n+1)/2 = 55."],
+["P01","Physics","Units, Dimensions & Errors","Dimensional formula of force:",["MLT⁻¹","MLT⁻²","ML²T⁻²","M²LT⁻²"],1,"m","F = ma."],
+["P02","Physics","Work, Energy & Power","KE (in J) of a 2 kg body moving at 3 m/s:",[],9,"n","½·2·9 = 9."],
+["P03","Physics","Current Electricity","Voltage (V) across a 5 Ω resistor carrying 2 A:",[],10,"n","V = IR = 10."],
+["P04","Physics","Oscillations & Waves","Time period (s) of a simple pendulum, L = 1 m, g = π² m/s²:",[],2,"n","T = 2π√(L/g) = 2."],
+["P05","Physics","Optics","Focal length of a concave mirror with radius of curvature 20 cm:",["5 cm","10 cm","20 cm","40 cm"],1,"m","f = R/2."],
+["P06","Physics","Optics","Speed of light in a medium of refractive index 1.5 (c = 3×10⁸ m/s):",["1×10⁸","2×10⁸","3×10⁸","4.5×10⁸"],1,"m","v = c/n = 2×10⁸."],
+["P07","Physics","Work, Energy & Power","Work done by the centripetal force in uniform circular motion is:",["Positive","Negative","Zero","Depends on radius"],2,"m","Force ⟂ displacement."],
+["P08","Physics","Current Electricity","Equivalent resistance (Ω) of 3 Ω and 6 Ω in parallel:",[],2,"n","18/9 = 2."],
+["C01","Chemistry","Atomic Structure","Atomic number of carbon:",["4","6","8","12"],1,"m","Carbon has 6 protons."],
+["C02","Chemistry","Thermodynamics & Equilibrium","pH of 0.01 M HCl (strong acid):",[],2,"n","−log 10⁻² = 2."],
+["C03","Chemistry","Some Basic Concepts / Mole","Molar mass of water (g/mol, H=1, O=16):",[],18,"n","2+16."],
+["C04","Chemistry","Chemical Bonding","Hybridisation of carbon in CH₄:",["sp","sp²","sp³","dsp²"],2,"m","Four σ bonds, tetrahedral."],
+["C05","Chemistry","Some Basic Concepts / Mole","Moles in 44 g of CO₂ (C=12, O=16):",[],1,"n","44/44 = 1."],
+["C06","Chemistry","p-block Elements","Which is a noble gas?",["Nitrogen","Chlorine","Argon","Sulfur"],2,"m","Argon is group 18."],
+["C07","Chemistry","GOC & Isomerism","IUPAC name of CH₃CH₂OH:",["Methanol","Ethanol","Propanol","Ethanal"],1,"m","Two carbons, –OH."],
+["C08","Chemistry","Redox & Hydrogen/s-block","Oxidation state of Mn in KMnO₄:",[],7,"n","+1 + x − 8 = 0."]
+].map(a=>({id:a[0],sub:a[1],ch:a[2],q:a[3],o:a[4],a:a[5],t:a[6],ex:a[7],src:"Generated practice",mk:4}));
+const TRICKS={Maths:[["Sum/product of roots","For ax²+bx+c: sum=−b/a, product=c/a, so no solving is needed.","x²−5x+6: sum 5, product 6.","Symmetric expressions of roots.","Not for finding roots themselves."],["det(kA)","For n×n matrix, det(kA)=kⁿ det A.","2×2, det 3 → det(2A)=12.","Scaled-matrix questions.","Only for scalar k."]],
+Physics:[["Dimensional check","Verify a formula by comparing dimensions of both sides.","v=u+at: all L/T.","Eliminating wrong options fast.","Cannot detect missing dimensionless constants."],["Parallel resistors","Two resistors: R=R₁R₂/(R₁+R₂).","3||6 = 18/9 = 2 Ω.","Quick circuit reduction.","Only two at a time."]],
+Chemistry:[["pH of strong acid","pH = −log[H⁺] and for 10⁻ⁿ M strong monoprotic acid pH=n.","0.01 M HCl → 2.","Direct pH questions.","Fails below ~10⁻⁶ M (water ionisation) and for weak acids."],["Oxidation state sum","Charges of all atoms must add up to the species charge.","KMnO₄: +1+x−8=0 → x=7.","Redox / coordination questions.","Needs known fixed states (O=−2 mostly, not peroxides)."]]};
+const MATS=[["NTA website","https://www.nta.ac.in/","Official notices"],["JEE Main official site","https://jeemain.nta.nic.in/","Syllabus, bulletin, previous papers"],["NCERT textbooks","https://ncert.nic.in/textbook.php","Free official textbooks (Class 11–12)"]];
+/* ============ STORAGE ============ */
+const KEY="jee27_v1";
+const DEF={target:"2027-01-22T09:00:00+05:30",nvqNeg:0,theme:"dark",prog:{},used:[],hist:[],extra:[],goal:"",todo:[],ytKey:"",cur:null};
+let D=load();
+function load(){try{const r=localStorage.getItem(KEY);return Object.assign(structuredClone(DEF),r?JSON.parse(r):{})}catch(e){return structuredClone(DEF)}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(D))}catch(e){alert("Could not save (storage full or blocked).")}}
+const bank=()=>Q.concat(D.extra.filter(validQ));
+function validQ(q){return q&&q.id&&SYL[q.sub]&&q.q&&(q.t==="n"?typeof q.a==="number":Array.isArray(q.o)&&q.o.length>=2&&Number.isInteger(q.a)&&q.a<q.o.length)}
+/* ============ HELPERS ============ */
+/* Auto-updated videos: videos.json is rewritten by a GitHub Action (see README) */
+let VID=null;
+fetch("videos.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{VID=j}).catch(()=>{});
+function vids(s){const l=VID&&VID.videos&&VID.videos[s];
+ if(!l||!l.length)return `<p class="mut">No synced videos yet. The GitHub updater fills this automatically once set up.</p>`;
+ return `<div class="mut">Updated ${esc(VID.updated||"")}</div>`+l.slice(0,8).map(v=>`<a class="vid" href="https://www.youtube.com/watch?v=${encodeURIComponent(v.id)}" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/${encodeURIComponent(v.id)}/mqdefault.jpg" alt=""><div><b>${esc(v.title)}</b><div class="mut">${esc(v.channel)}</div></div></a>`).join("")}
+
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const PN={H:"High",M:"Medium",L:"Low"};
+function dl(name,text,type){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:type||"text/plain"}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)}
+function yt(q){return "https://www.youtube.com/results?search_query="+encodeURIComponent(q)}
+let timer=null;
+/* ============ VIEWS ============ */
+const V={};
+function go(v,...a){view=v;if(v==="result")setTimeout(()=>shower(),300);clearInterval(timer);timer=null;document.documentElement.dataset.t=D.theme;V[v](...a);scrollTo(0,0)}
+const back=(to="home")=>`<button class="s" onclick="go('${to}')">← Back</button>`;
+function pct(sub){const c=SYL[sub].ch;const d=c.filter(x=>(D.prog[sub+"|"+x[0]]||0)>=3).length;return Math.round(d/c.length*100)}
+V.home=()=>{
+ $("#app").innerHTML=`<div class="hero"><span class="hat">🏴‍☠️</span><h1>JEE MAIN 2027 COUNTDOWN</h1></div><div class="card"><div class="cd" id="cd"></div></div>
+ <div class="tiles">${[["Maths","🧭"],["Physics","⚓"],["Chemistry","🧪"]].map(x=>`<button class="tile sub" onclick="go('subj','${x[0]}')"><span>${x[1]}</span>${x[0].toUpperCase()}</button>`).join("")}</div>
+ <div class="tiles"><button class="tile" onclick="go('tricks')"><span>🗺️</span>CHEATS &amp; TRICKS</button><button class="tile" onclick="go('mocks')"><span>⚔️</span>MOCK TESTS</button><button class="tile" onclick="go('progress')"><span>📈</span>PROGRESS</button><button class="tile" onclick="go('tracker')"><span>📜</span>PERFORMANCE TRACKER</button><button class="tile" onclick="go('mats')"><span>🧰</span>STUDY MATERIALS</button><button class="tile" onclick="go('settings')"><span>⚙️</span>SETTINGS</button></div>
+ <div class="card"><h3>Today · ${new Date().toDateString()}</h3>${todo()}</div>`;
+ tick();timer=setInterval(tick,1000)};
+V.progress=()=>{const h=D.hist,tot=SYL.Maths.ch.length+SYL.Physics.ch.length+SYL.Chemistry.ch.length;
+ const done=Object.values(D.prog).filter(v=>v>=3).length,sc=h.map(x=>x.marks);
+ $("#app").innerHTML=`${back()}<h1>PROGRESS</h1><div class="card"><div class="bar"><i style="width:${Math.round(done/tot*100)}%"></i></div><p class="mut">${Math.round(done/tot*100)}% of all chapters finished</p></div>
+ <div class="tiles"><div class="card stat">Mocks<b>${h.length}</b></div><div class="card stat">Average<b>${sc.length?(sc.reduce((a,b)=>a+b,0)/sc.length).toFixed(1):"–"}</b></div><div class="card stat">Best<b>${sc.length?Math.max(...sc):"–"}</b></div><div class="card stat">Latest<b>${sc.length?sc[sc.length-1]:"–"}</b></div></div>
+ ${["Maths","Physics","Chemistry"].map(s=>`<div class="card"><b>${s}</b> · ${pct(s)}%<div class="bar"><i style="width:${pct(s)}%"></i></div></div>`).join("")}`};
+function tick(){const el=$("#cd");if(!el)return;const t=new Date(D.target);let ms=isNaN(t)?0:Math.max(0,t-Date.now()),s=Math.floor(ms/1e3);
+ const p=[["Days",Math.floor(s/86400)],["Hours",Math.floor(s%86400/3600)],["Minutes",Math.floor(s%3600/60)],["Seconds",s%60]];
+ el.innerHTML=p.map(x=>`<div><b>${x[1]}</b>${x[0]}</div>`).join("");
+}
+function todo(){return `<div class="mut">Daily goal: ${esc(D.goal||"not set (Settings)")}</div>`+D.todo.map((t,i)=>`<label style="display:block"><input type="checkbox" ${t.d?"checked":""} onchange="D.todo[${i}].d=this.checked;save()"> ${esc(t.t)}</label>`).join("")+
+ `<input id="nt" placeholder="Add task"><button onclick="if($('#nt').value.trim()){D.todo.push({t:$('#nt').value.trim(),d:false});save();go('home')}">Add</button>`}
+V.subj=s=>{const S=SYL[s];$("#app").innerHTML=`${back()}<h1>${s.toUpperCase()}</h1><div class="bar"><i style="width:${pct(s)}%"></i></div><p class="mut">${pct(s)}% chapters done</p>
+ <button onclick="go('vimp','${s}')">VIMP — ${s.toUpperCase()}</button>
+ <div class="card"><h3>Syllabus tracker</h3>${S.ch.map(c=>{const k=s+"|"+c[0],v=D.prog[k]||0;return `<div style="margin:8px 0"><b>${esc(c[0])}</b><br><select onchange="D.prog['${k.replace(/'/g,"\\'")}']=+this.value;save()">${["Not started","Learning","Revision completed","PYQs completed"].map((n,i)=>`<option value="${i}" ${v==i?"selected":""}>${n}</option>`).join("")}</select> <a class="pill" href="${yt("JEE Main "+s+" "+c[0])}" target="_blank" rel="noopener">▶ videos</a></div>`}).join("")}</div>
+ <div class="card"><h3>Video library</h3><p class="mut">Links open a live YouTube search for each topic type (no unverified video IDs are shipped). For a curated list, add a YouTube API key in Settings.</p>
+ ${["Complete chapter","One-shot revision","PYQ practice","Important questions","Formula revision","Last-minute revision"].map(k=>`<a class="pill" href="${yt("JEE Main "+s+" "+k)}" target="_blank" rel="noopener">${k}</a>`).join("")}</div>
+ <div class="card"><h3>🎥 Latest from YouTube</h3>${vids(s)}</div>
+ <div class="card"><h3>🧰 Materials</h3>${MATS.map(m=>`<div class="res" style="margin:8px 0"><div><b>${m[0]}</b><div class="mut">${m[2]}</div></div><a class="bt" href="${m[1]}" target="_blank" rel="noopener"><button class="s">Open ➜</button></a></div>`).join("")}</div>`};
+V.vimp=(s,sort="p")=>{let c=SYL[s].ch.map(x=>({n:x[0],p:x[1],d:(D.prog[s+"|"+x[0]]||0)>=3}));
+ const w={H:0,M:1,L:2};if(sort==="p")c.sort((a,b)=>w[a.p]-w[b.p]);
+ $("#app").innerHTML=`${back("subj','"+s)}<h1>VIMP — ${s.toUpperCase()}</h1>
+ <div class="card mut"><b>How ranking works:</b> priority is an <b>indicative</b> label from the broad pattern of recent JEE Main papers (High = large/recurring unit). Exact historical question counts were <b>not verified</b> here, so none are shown; nothing is guaranteed to appear. Edit SYL in the code with your own PYQ tally.</div>
+ <select onchange="V.vimp('${s}',this.value)"><option value="p" ${sort=="p"?"selected":""}>Sort: priority</option><option value="s" ${sort=="s"?"selected":""}>Sort: syllabus order</option></select>
+ <div class="sc"><table><tr><th>Chapter</th><th>Priority</th><th>Status</th></tr>${c.map(x=>`<tr><td>${esc(x.n)}</td><td class="${x.p}">${PN[x.p]}</td><td>${x.d?"✔ done":"pending"}</td></tr>`).join("")}</table></div>`};
+V.tricks=()=>{$("#app").innerHTML=`${back()}<h1>CHEATS &amp; TRICKS</h1><p class="mut">Legitimate preparation shortcuts only.</p>`+Object.keys(TRICKS).map(s=>`<h2>${s}</h2>`+TRICKS[s].map(t=>`<div class="card"><h3>${t[0]}</h3>${t[1]}<br><b>Example:</b> ${t[2]}<br><b>Use when:</b> ${t[3]}<br><b>Limits:</b> ${t[4]}<br><a href="${yt("JEE Main "+s+" tricks "+t[0])}" target="_blank" rel="noopener">▶ related videos</a></div>`).join("")).join("")};
+V.mats=()=>{$("#app").innerHTML=`${back()}<h1>STUDY MATERIALS</h1><p class="mut">Official, free sources, opened at the source.</p>`+MATS.map((m,i)=>`<div class="card res"><div class="ic">${["📜","🧭","📚"][i]||"📘"}</div><div><b>${m[0]}</b><div class="mut">${m[2]}</div></div><a class="bt" href="${m[1]}" target="_blank" rel="noopener"><button>Open ➜</button></a></div>`).join("")};
+/* ---- Mock tests ---- */
+V.mocks=()=>{const b=bank(),left=s=>b.filter(q=>q.sub===s&&!D.used.includes(q.id)).length;
+ $("#app").innerHTML=`${back()}<h1>MOCK TESTS</h1><div class="card mut">Pattern used (latest available; not yet official for 2027): 25 Qs/subject = 20 MCQ + 5 numerical, +4 correct, −1 wrong MCQ. Numerical negative marking is reported inconsistently by sources, so it is a Setting (now: ${D.nvqNeg}). Questions are <b>generated practice</b>, not past papers.<br>Unused questions: Maths ${left("Maths")}, Physics ${left("Physics")}, Chemistry ${left("Chemistry")}.</div>
+ <div class="g"><button onclick="start('Morning Mock',['Maths','Physics','Chemistry'])">Morning Mock</button><button onclick="start('Evening Mock',['Maths','Physics','Chemistry'])">Evening Mock</button>
+ ${["Maths","Physics","Chemistry"].map(s=>`<button class="s" onclick="start('${s} Test',['${s}'])">${s} test</button>`).join("")}</div>
+ <p class="mut">Per-subject questions per test: <select id="per"><option>4</option><option selected>3</option><option>8</option></select> (up to what remains unused)</p>
+ ${D.cur?`<button class="s" onclick="go('test')">Resume unfinished test</button>`:""}`};
+function start(title,subs){const per=+($("#per")?.value||3);let qs=[],short=[];
+ subs.forEach(s=>{const pool=bank().filter(q=>q.sub===s&&!D.used.includes(q.id));
+  const pick=pool.sort(()=>Math.random()-.5).slice(0,subs.length>1?per:Math.max(per,8));if(pick.length<(subs.length>1?per:Math.max(per,8)))short.push(s);qs=qs.concat(pick)});
+ if(!qs.length){alert("No unused questions left. Add new verified questions in Settings → Import questions. Repeats are never served silently.");return}
+ if(short.length&&!confirm("Not enough unused questions for: "+short.join(", ")+". Start a shorter test?"))return;
+ qs=qs.sort((a,b)=>a.sub<b.sub?-1:0);
+ D.cur={title,date:new Date().toISOString(),qs,ans:{},st:{},i:0,end:Date.now()+qs.length*144000};D.used.push(...qs.map(q=>q.id));save();go("test")}
+V.test=()=>{const c=D.cur;if(!c){go("mocks");return}
+ const q=c.qs[c.i],id=q.id,st=c.st[id]||0;c.st[id]=st||1;
+ const cls=x=>{const s=c.st[x.id]||0,a=c.ans[x.id]!=null;return a&&s>=2?"n-v":a?"n-a":s>=2?"n-r":s==1?"":"n-na"};
+ $("#app").innerHTML=`<div class="card"><b>${esc(c.title)}</b> · <span id="tm"></span> <button class="bad" style="float:right" onclick="submitT()">Submit</button></div>
+ <div class="card"><div class="mut">Q${c.i+1}/${c.qs.length} · ${q.sub} · ${esc(q.ch)} · ${q.t==="n"?"Numerical":"MCQ"} · ${q.src}</div><h3>${esc(q.q)}</h3>
+ ${q.t==="n"?`<input id="na" type="number" step="any" value="${c.ans[id]??""}" oninput="setA(this.value)" placeholder="Answer">`:q.o.map((o,i)=>`<button class="opt ${c.ans[id]===i?"on":""}" onclick="setA(${i})">${"ABCD"[i]}. ${esc(o)}</button>`).join("")}
+ <div><button class="s" onclick="mv(-1)">Prev</button><button class="s" onclick="mv(1)">Next</button><button class="s" onclick="clr()">Clear</button><button class="s" onclick="rev()">Mark for review</button></div></div>
+ <div class="mut">Grey: not visited · outlined: not answered · green: answered · purple: review · yellow: answered+review</div>
+ <div class="nav">${c.qs.map((x,i)=>`<button class="${cls(x)}" onclick="D.cur.i=${i};save();go('test')">${i+1}</button>`).join("")}</div>`;
+ save();const t=()=>{const r=Math.max(0,c.end-Date.now());$("#tm").textContent=Math.floor(r/6e4)+":"+String(Math.floor(r%6e4/1e3)).padStart(2,"0");if(!r){submitT(true)}};t();timer=setInterval(t,1000)};
+function setA(v){const c=D.cur,q=c.qs[c.i];if(q.t==="n"){c.ans[q.id]=v===""?null:parseFloat(v)}else{c.ans[q.id]=v}save();if(q.t!=="n")go("test")}
+function mv(d){const c=D.cur;c.i=Math.min(c.qs.length-1,Math.max(0,c.i+d));save();go("test")}
+function clr(){const c=D.cur;delete c.ans[c.qs[c.i].id];save();go("test")}
+function rev(){const c=D.cur,id=c.qs[c.i].id;c.st[id]=c.st[id]>=2?1:2;save();go("test")}
+function submitT(auto){const c=D.cur;if(!auto&&!confirm("Submit test? "+Object.values(c.ans).filter(x=>x!=null).length+" of "+c.qs.length+" answered."))return;
+ let r={title:c.title,date:c.date,qs:c.qs,ans:c.ans,correct:0,wrong:0,skip:0,marks:0,max:0,by:{},chap:{}};
+ c.qs.forEach(q=>{const a=c.ans[q.id];r.max+=4;const S=r.by[q.sub]||(r.by[q.sub]={m:0,c:0,w:0});const C=r.chap[q.sub+" · "+q.ch]||(r.chap[q.sub+" · "+q.ch]={c:0,n:0});C.n++;
+  if(a==null){r.skip++;return}
+  const ok=q.t==="n"?Math.abs(a-q.a)<1e-6:a===q.a;
+  if(ok){r.correct++;r.marks+=4;S.m+=4;S.c++;C.c++}else{r.wrong++;const p=q.t==="n"?D.nvqNeg:1;r.marks-=p;S.m-=p;S.w++}});
+ r.attempted=r.correct+r.wrong;r.pct=r.marks/r.max*100;r.acc=r.attempted?r.correct/r.attempted*100:0;
+ D.hist.push(r);D.cur=null;save();go("result",D.hist.length-1)}
+V.result=i=>{const r=D.hist[i];if(!r){go("home");return}
+ $("#app").innerHTML=`${back()}<h1>${esc(r.title)} — Result</h1><div class="card"><b>${r.marks} / ${r.max}</b> (${r.pct.toFixed(1)}%)<br>Correct ${r.correct} · Wrong ${r.wrong} · Unanswered ${r.skip} · Attempted ${r.attempted} · Accuracy ${r.acc.toFixed(1)}%</div>
+ <div class="card"><h3>Subject-wise</h3>${Object.entries(r.by).map(([s,v])=>`${s}: ${v.m} marks (${v.c} correct, ${v.w} wrong)`).join("<br>")}</div>
+ <div class="card"><h3>Chapter-wise</h3>${Object.entries(r.chap).map(([k,v])=>`${esc(k)}: ${v.c}/${v.n}`).join("<br>")}</div>
+ <div class="card"><h3>ESTIMATED MOCK PERFORMANCE</h3>Percentage: ${r.pct.toFixed(1)}%<br>Percentile estimation unavailable because verified reference data is insufficient. Mock percentages are not NTA percentiles.</div>
+ <button onclick="dlPaper(${i})">DOWNLOAD QUESTION PAPER</button><button onclick="dlKey(${i})">DOWNLOAD ANSWER KEY</button><button onclick="dlRep(${i})">DOWNLOAD RESULT REPORT</button>
+ <div class="card"><h3>Review</h3>${r.qs.map((q,n)=>{const a=r.ans[q.id];return `<p><b>Q${n+1}.</b> ${esc(q.q)}<br>Your answer: ${a==null?"–":q.t==="n"?a:"ABCD"[a]} · Correct: ${q.t==="n"?q.a:"ABCD"[q.a]}<br><span class="mut">${esc(q.ex)}</span></p>`}).join("")}</div>`};
+const ans=q=>q.t==="n"?q.a:"ABCD"[q.a]+". "+q.o[q.a];
+function dlPaper(i){const r=D.hist[i];dl("JEE_Mock_Paper_"+r.date.slice(0,10)+".html",`<!DOCTYPE html><meta charset=utf-8><title>${esc(r.title)}</title><body style="font-family:serif;max-width:700px;margin:auto"><h1>${esc(r.title)}</h1><p>${r.date.slice(0,10)} · Numerical questions: enter a number.</p>`+r.qs.map((q,n)=>`<p><b>${n+1}. [${q.sub}]</b> ${esc(q.q)}${q.t==="n"?"<br>Answer: ________":"<br>"+q.o.map((o,k)=>"("+"ABCD"[k]+") "+esc(o)).join("<br>")}</p>`).join("")+"<script>print()<\/script>","text/html")}
+function dlKey(i){const r=D.hist[i];dl("JEE_Answer_Key_"+r.date.slice(0,10)+".txt",r.qs.map((q,n)=>`Q${n+1}: ${ans(q)}\n   ${q.ex}`).join("\n"))}
+function dlRep(i){const r=D.hist[i];let t=`${r.title}\nDate,${r.date}\nMarks,${r.marks}/${r.max}\nPercentage,${r.pct.toFixed(1)}\nAccuracy,${r.acc.toFixed(1)}\n\nSubject,Marks\n`+Object.entries(r.by).map(([s,v])=>s+","+v.m).join("\n")+"\n\nChapter,Correct,Total\n"+Object.entries(r.chap).map(([k,v])=>`"${k}",${v.c},${v.n}`).join("\n")+"\n\nIncorrect questions\n"+r.qs.filter(q=>{const a=r.ans[q.id];return a!=null&&!(q.t==="n"?a===q.a:a===q.a)}).map(q=>`"${q.q.replace(/"/g,"'")}"`).join("\n");dl("JEE_Result_Report_"+r.date.slice(0,10)+".csv",t,"text/csv")}
+V.tracker=()=>{$("#app").innerHTML=`${back()}<h1>PERFORMANCE TRACKER</h1>`+(D.hist.length?`<div class="card sc"><table><tr><th>Date</th><th>Test</th><th>Marks</th><th>%</th><th>Acc.</th><th></th></tr>${D.hist.map((r,i)=>`<tr><td>${r.date.slice(0,10)}</td><td>${esc(r.title)}</td><td>${r.marks}/${r.max}</td><td>${r.pct.toFixed(0)}</td><td>${r.acc.toFixed(0)}%</td><td><button class="s" onclick="go('result',${i})">Open</button></td></tr>`).join("")}</table></div>${weak()}`:`<div class="card">No tests attempted yet.</div>`)};
+function weak(){const m={};D.hist.forEach(r=>Object.entries(r.chap).forEach(([k,v])=>{m[k]=m[k]||{c:0,n:0};m[k].c+=v.c;m[k].n+=v.n}));
+ const w=Object.entries(m).filter(([k,v])=>v.c/v.n<.6).map(([k,v])=>`${esc(k)} (${v.c}/${v.n})`);return `<div class="card"><h3>Weak chapters (&lt;60% correct)</h3>${w.length?w.join("<br>"):"None yet"}</div>`}
+/* ---- Settings ---- */
+V.settings=()=>{$("#app").innerHTML=`${back()}<h1>SETTINGS</h1>
+ <div class="card"><h3>Target exam date (tentative per NTA calendar)</h3><input type="datetime-local" id="td" value="${D.target.slice(0,16)}"> <button onclick="const v=$('#td').value;if(isNaN(new Date(v))){alert('Invalid date')}else{D.target=v;save();alert('Saved')}">Save</button></div>
+ <div class="card"><h3>Daily study goal</h3><input id="gl" value="${esc(D.goal)}"> <button onclick="D.goal=$('#gl').value;save();alert('Saved')">Save</button></div>
+ <div class="card"><h3>Numerical-question wrong-answer penalty</h3><select onchange="D.nvqNeg=+this.value;save()"><option value="0" ${D.nvqNeg==0?"selected":""}>0 (no negative)</option><option value="1" ${D.nvqNeg==1?"selected":""}>−1</option></select><div class="mut">Sources disagree; confirm in the NTA Information Bulletin.</div></div>
+ <div class="card"><h3>Theme</h3><button class="s" onclick="D.theme=D.theme=='dark'?'light':'dark';save();go('settings')">Switch to ${D.theme=="dark"?"light":"dark"}</button></div>
+ <div class="card"><h3>YouTube API key</h3><input id="yk" value="${esc(D.ytKey)}" placeholder="Optional"> <button onclick="D.ytKey=$('#yk').value;save()">Save</button><div class="mut">Auto-updating videos needs the YouTube Data API v3 and a small backend; a key placed in a static file is visible to anyone, so restrict it by HTTP referrer/quota. Not wired up in this single-file build — links use YouTube search instead.</div></div>
+ <div class="card"><h3>Data</h3><button onclick="dl('JEE_Prep_Backup.json',JSON.stringify(D))">Export JSON</button><button class="s" onclick="$('#im').click()">Import JSON</button><input type="file" id="im" accept=".json" hidden onchange="imp(this.files[0])">
+ <h3>Add questions (JSON array)</h3><textarea id="aq" rows="4" style="width:100%" placeholder='[{"id":"M99","sub":"Maths","ch":"Complex Numbers","q":"...","o":["a","b","c","d"],"a":0,"t":"m","ex":"...","src":"Source, year","mk":4}]'></textarea><button onclick="addQ()">Add verified questions</button>
+ <div class="mut">Progress is stored in this browser's localStorage and is lost if site data is cleared – export regularly.</div></div>
+ <div class="card"><button class="bad" onclick="if(confirm('Erase ALL progress, history and attempted-question records?')){localStorage.removeItem(KEY);D=structuredClone(DEF);go('home')}">Reset all progress</button></div>`};
+function imp(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{const o=JSON.parse(r.result);if(typeof o!=="object"||!Array.isArray(o.hist)||!Array.isArray(o.used))throw 0;
+ if(confirm("Importing replaces your current data. Continue?")){D=Object.assign(structuredClone(DEF),o);save();go("home")}}catch(e){alert("Invalid backup file.")}};r.readAsText(f)}
+function addQ(){try{const a=JSON.parse($("#aq").value);if(!Array.isArray(a))throw 0;const ids=new Set(bank().map(q=>q.id));const ok=a.filter(q=>validQ(q)&&!ids.has(q.id));
+ D.extra.push(...ok);save();alert(ok.length+" added, "+(a.length-ok.length)+" rejected (invalid or duplicate id).")}catch(e){alert("Invalid JSON.")}}
+
+/* ===== Straw Hat fun layer (emoji only; skipped during tests and for reduced-motion users) ===== */
+const REDUCE=matchMedia("(prefers-reduced-motion:reduce)").matches;let view="home";
+const QUIPS=["Meat! 🍖","I'm gonna be King of the JEE! 👑","Rubber brain stretching… 🧠","Navigate to 99 percentile! 🧭","Snack break? After this chapter!","PYQs are the real treasure ⚔️","Set sail, don't skip revision ⛵","Why is the chair so comfy… study! 😴","Sanji says: no wasting food OR time 🍳"];
+const rnd=a=>a[Math.floor(Math.random()*a.length)];
+const quiet=()=>REDUCE||view==="test"||document.hidden;
+function bubble(x,y,t){const b=document.createElement("div");b.className="bub";b.textContent=t;b.style.left=Math.min(innerWidth-210,Math.max(6,x-60))+"px";b.style.top=Math.max(6,y-50)+"px";document.body.appendChild(b);setTimeout(()=>b.style.opacity=0,1800);setTimeout(()=>b.remove(),2300)}
+function shower(e,n=14){if(REDUCE)return;for(let i=0;i<n;i++){const d=document.createElement("div");d.className="sh";d.textContent=e||rnd(["👒","🍖","🍊","⚓"]);d.style.left=Math.random()*95+"vw";d.style.animationDelay=Math.random()*1.2+"s";document.body.appendChild(d);setTimeout(()=>d.remove(),4500)}}
+function spawn(){if(quiet())return;const e=document.createElement("div");e.className="fh"+(Math.random()<.5?" r":"");e.innerHTML="<span>"+rnd(["👒","🏴‍☠️","🍖","🦌","🍊","⚓","🛡️"])+"</span>";
+ e.style.top=(12+Math.random()*60)+"vh";e.style.setProperty("--d",(9+Math.random()*7)+"s");
+ e.onclick=()=>{const r=e.getBoundingClientRect();e.style.left=r.left+"px";e.style.right="auto";e.style.top=r.top+"px";e.classList.remove("r");e.classList.add("pop");bubble(r.left,r.top,rnd(QUIPS));setTimeout(()=>e.remove(),700)};
+ e.onanimationend=ev=>{if(ev.animationName!=="pop")e.remove()};document.body.appendChild(e)}
+function ship(){if(quiet())return;const s=document.createElement("div");s.className="ship";s.textContent="⛵";document.body.appendChild(s);setTimeout(()=>s.remove(),23000)}
+setTimeout(spawn,2500);setInterval(spawn,8000);setTimeout(ship,6000);setInterval(ship,70000);
+document.addEventListener("click",e=>{if(quiet())return;const h=e.target.closest(".hat");if(h){h.style.transition="transform .8s";h.style.transform="rotate(720deg) scale(1.6)";setTimeout(()=>h.style.transform="",900);bubble(e.clientX,e.clientY,rnd(QUIPS));shower("👒",10);return}
+ if(e.target.closest("button")&&Math.random()<.25){const d=document.createElement("div");d.className="sh";d.style.top=e.clientY+"px";d.style.left=e.clientX+"px";d.style.animationName="rise";d.textContent=rnd(["👒","🍖","⭐"]);document.body.appendChild(d);setTimeout(()=>d.remove(),600)}});
+go("home");
+if("serviceWorker"in navigator&&location.protocol.startsWith("http"))navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script></body></html>
